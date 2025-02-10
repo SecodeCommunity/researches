@@ -1,0 +1,158 @@
+# Nmap: Temel Komutlar ve Tarama Yöntemleri
+
+Nmap (Network Mapper), ağ güvenliği taramaları ve keşifleri için yaygın olarak kullanılan güçlü bir araçtır. Nmap, ağdaki cihazları keşfetmek, açık portları tespit etmek, işletim sistemi bilgilerini almak ve güvenlik açıklarını test etmek için kullanılabilir. 
+
+## 1️ Nmap Paket Parçalama (-f)
+Nmap, tarama işlemi sırasında gönderilen paketleri parçalayarak gönderir. Bu, ağdaki güvenlik duvarlarının veya izleme sistemlerinin, Nmap taramalarını algılamasını zorlaştırır. Bu yöntem, taramaların daha az fark edilmesini sağlar.
+
+**Komut Örneği:**
+```bash
+nmap -f 10.10.10.10
+```
+Bu komut, hedef IP’ye yapılan tarama sırasında paketleri parçalar ve daha gizli bir tarama gerçekleştirir.
+
+## 2️ Host Kontrolü (-Pn)
+Nmap, genellikle hedef sistemin aktif olup olmadığını kontrol eder. Ancak, bazen hedefin ağda aktif olduğunu varsayarak, ping taraması yapmadan doğrudan port taraması başlatmak isterseniz, `-Pn` seçeneğini kullanabilirsiniz.
+
+**Komut Örneği:**
+```bash
+nmap -Pn 10.10.10.10
+```
+Bu komut, hedefin aktif olup olmadığını kontrol etmeden port taraması yapar.
+
+## 3️ TCP Bağlantı Taraması (-sT)
+TCP bağlantı taraması, Nmap’in tam bağlantı kurarak hedef sisteme port taraması yaptığı bir yöntemdir. Bu, üçlü el sıkışma (Three-Way Handshake) ile bağlantıyı tamamlar.
+
+**Komut Örneği:**
+```bash
+nmap -sT 10.10.10.10
+```
+Bu komut, hedef IP üzerindeki TCP bağlantı portlarını tarar.
+
+## 4️ SYN Taraması (-sS)
+SYN taraması, Nmap’in yalnızca SYN paketi gönderdiği ve sunucunun bu paketlere verdiği yanıta göre portların açık mı kapalı mı olduğunu belirlediği bir tarama türüdür.
+
+**Komut Örneği:**
+```bash
+nmap -sS 10.10.10.10
+```
+Bu komut, hedef IP’ye SYN taraması yaparak portların açık olup olmadığını kontrol eder.
+
+## 5️ UDP Taraması (-sU)
+UDP taraması, Nmap'in UDP portlarını taramak için kullanılan bir yöntemdir. UDP portları tespit edilmesi zor olduğu için, bu tür taramalar genellikle daha uzun sürer.
+
+**Komut Örneği:**
+```bash
+nmap -sU 10.10.10.10
+```
+Bu komut, hedef IP üzerinde UDP port taraması yapar.
+
+## 6️ TCP Null Taraması (-sN)
+Null tarama, TCP başlık bilgilerini tamamen boş bırakır ve yalnızca veri alanını kullanarak tarama yapar.
+
+**Komut Örneği:**
+```bash
+nmap -sN 10.10.10.10
+```
+Bu komut, hedef IP üzerinde null taraması yapar.
+
+## 7️ TCP FIN Taraması (-sF)
+FIN taraması, TCP paketlerini FIN bayrağı ile gönderir ve yalnızca açık portlar yanıt verir.
+
+**Komut Örneği:**
+```bash
+nmap -sF 10.10.10.10
+```
+Bu komut, hedef IP üzerinde FIN taraması yapar.
+
+## 8️ TCP Xmas Taraması (-sX)
+Xmas taraması, TCP paketlerine FIN, PSH ve URG bayrakları ekler.
+
+**Komut Örneği:**
+```bash
+nmap -sX 10.10.10.10
+```
+Bu komut, hedef IP üzerinde Xmas taraması yapar.
+ FIN,Xmas,null,çalışma mantığı olarak udp ile aynı mantık ile çalışır.
+
+## 9️ İşletim Sistemi Tespiti (-O)
+Nmap, hedef sistemin işletim sistemi bilgilerini almak için kullanılabilir.
+
+**Komut Örneği:**
+```bash
+nmap -O 10.10.10.10
+```
+Bu komut, hedef IP üzerindeki işletim sistemini tespit eder.
+
+## 10 Aggressive Tarama (-A)
+Aggressive tarama tüm temel Nmap taramalarını bir arada yaparak daha ayrıntılı bilgi elde etmeni sağlar.
+
+**Komut Örneği:**
+```bash
+nmap -A 10.10.10.10
+```
+Bu komut, hedef IP üzerinde agresif tarama yaparak kapsamlı bir güvenlik taraması gerçekleştirir.
+
+## 11 Port Aralığı Belirleme (-p)
+Nmap ile belirli bir port aralığını tarayabiliriz.
+
+**Komut Örneği:**
+```bash
+nmap -p 80,443 10.10.10.10
+```
+Bu komut, sadece 80 ve 443 portlarını tarar.
+
+## 1️2 Taramaları Kaydetme (-oN, -oX, -oG)
+Nmap taramalarını kaydedebilirsiniz:
+
+- **Normal formatta kayıt:**
+  ```bash
+  nmap -oN tarama_sonuclari.txt 10.10.10.10
+  ```
+- **XML formatında kayıt:**
+  ```bash
+  nmap -oX tarama_sonuclari.xml 10.10.10.10
+  ```
+- **Grep için uygun formatta kayıt:**
+  ```bash
+  nmap -oG tarama_sonuclari.gnmap 10.10.10.10
+  ```
+
+## 1️3 Zamanlama Ayarlama (-T)
+Nmap’in tarama hızını belirlemek için `-T` parametresi kullanılır:
+
+- **En yavaş (Stealth) tarama:**
+  ```bash
+  nmap -T0 10.10.10.10
+  ```
+- **Yavaş tarama:**
+  ```bash
+  nmap -T1 10.10.10.10
+  ```
+- **Dengeli tarama:**
+  ```bash
+  nmap -T3 10.10.10.10
+  ```
+- **Hızlı tarama:**
+  ```bash
+  nmap -T4 10.10.10.10
+  ```
+- **En hızlı tarama (Gürültülü):**
+  ```bash
+  nmap -T5 10.10.10.10
+  ```
+
+## 1️4 Gönderilecek Paket Sayısını Belirleme (--min-rate, --max-rate)
+Eğer taramanın hızını belirlemek istiyorsanız, `--min-rate` ve `--max-rate` parametrelerini kullanabilirsiniz:
+
+- **Dakikada en az 100 paket göndermek için:**
+  ```bash
+  nmap --min-rate 100 10.10.10.10
+  ```
+- **Dakikada en fazla 1000 paket göndermek için:**
+  ```bash
+  nmap --max-rate 1000 10.10.10.10
+  ```
+
+Bu komutlar, taramanın süresini kontrol etmek ve ağ üzerindeki etkisini azaltmak için kullanılabilir.
+
