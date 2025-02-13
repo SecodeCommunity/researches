@@ -1,0 +1,126 @@
+
+
+DNS (Domain Name System), internetin telefon rehberi gibidir. Kullanıcılar web sitelerine erişirken www.google.com gibi alan adlarını kullanır, ancak bilgisayarlar ve ağ cihazları IP adresleri (örn: 142.250.182.206) ile çalışır. DNS, alan adlarını IP adreslerine çevirerek internet erişimini kolaylaştırır.
+
+2. DNS in Çalışma Süreci
+
+DNS sorgulama süreci, bir kullanıcının tarayıcısına bir alan adı yazmasıyla başlar ve aşağıdaki aşamalardan geçerek tamamlanır:
+
+1️ Kullanıcı Sorgu Gönderir
+
+Kullanıcı, www.example.com gibi bir alan adı girer.
+
+Tarayıcı, ilgili IP adresini bulmak için bir DNS sorgusu başlatır.
+
+2️ DNS Önbelleği Kontrol Edilir
+
+İlk olarak, bilgisayarın yerel önbelleği kontrol edilir.
+
+Eğer IP adresi önbellekte varsa, doğrudan kullanılabilir ve sorgulama işlemi burada biter.
+
+Eğer önbellekte yoksa, DNS sunucularına sorgu gönderilir.
+
+3️ Yerel DNS Sunucusuna (Recursive Resolver) Gönderme
+
+İnternet Servis Sağlayıcısı (ISS) tarafından sağlanan Recursive Resolver (Özyinelemeli Çözümleyici) sunucusu devreye girer.
+
+Eğer daha önce çözümlediği bir kayıt varsa, önbellekten yanıt döner.
+
+Eğer kayıt yoksa, kök DNS sunucusuna bir sorgu gönderilir.
+
+4️ Kök DNS Sunucusu (Root Server) Yanıt Verir
+
+Kök sunucular, IP adresi vermez; sadece hangi TLD (Top Level Domain - Üst Düzey Alan Adı) sunucusunun sorumlu olduğunu söyler.
+
+Örneğin, .com alan adları için .com TLD sunucusuna yönlendirme yapar.
+
+5️ TLD Sunucusu Yanıt Verir
+
+TLD sunucusu, example.com alan adının hangi Yetkili Ad Sunucusu (Authoritative Name Server) tarafından yönetildiğini söyler.
+
+Örneğin, ns1.example.com gibi yetkili DNS sunucularına yönlendirme yapar.
+
+6️ Yetkili DNS Sunucusu Nihai Yanıtı Döndürür
+
+Yetkili ad sunucusu, example.com un gerçek IP adresini döndürür.
+
+Recursive Resolver bu IP adresini alır ve bilgisayarın önbelleğine kaydeder.
+
+7️ Tarayıcı Web Sitesine Bağlanır
+
+Tarayıcı, alınan IP adresi ile hedef web sunucusuna bağlantı kurar.
+
+Kullanıcı, www.example.com sayfasını açmış olur.
+
+3. DNS Kayıt Türleri
+
+DNS, farklı hizmetler için çeşitli kayıt türlerine sahiptir:
+
+ 1. A (Address) Kaydı
+
+İşlevi: Alan adını IPv4 adresine çevirir.
+
+Örnek:
+
+example.com  IN  A  192.168.1.1
+
+Bu kayıt, example.com alan adının 192.168.1.1 IP adresine yönlendirildiğini belirtir.
+
+2. AAAA (IPv6 Address) Kaydı
+
+İşlevi: Alan adını IPv6 adresine çevirir.
+
+Örnek:
+
+example.com  IN  AAAA  2001:db8::ff00:42:8329
+
+Bu kayıt, example.com alan adının IPv6 adresini belirtir.
+
+ 3. CNAME (Canonical Name) Kaydı
+
+İşlevi: Bir alan adını başka bir alan adına yönlendirir.
+
+Örnek:
+
+www.example.com  IN  CNAME  example.com
+
+Bu kayıt, www.example.com un example.com alan adına yönlendirildiğini gösterir.
+
+4. MX (Mail Exchange) Kaydı
+
+İşlevi: Alan adıyla ilişkili e-posta sunucularını belirtir.
+
+Örnek:
+
+example.com  IN  MX  10 mail.example.com
+
+Bu kayıt, example.com için e-posta sunucusunun mail.example.com olduğunu ve önceliğinin 10 olduğunu gösterir.
+
+5. TXT  Kaydı
+
+İşlevi: Alan adıyla ilgili metin bilgileri sağlar. Genellikle doğrulama ve güvenlik amaçlı kullanılır.
+
+
+Bu kayıt, e-posta doğrulaması için SPF kaydını içerir.
+
+ 6. NS (Name Server) Kaydı
+
+İşlevi: Alan adının hangi yetkili ad sunucuları tarafından yönetildiğini belirler.
+
+Örnek:
+
+example.com  IN  NS  ns1.example.com
+example.com  IN  NS  ns2.example.com
+
+Bu kayıtlar, example.com alan adının ns1.example.com ve ns2.example.com sunucuları tarafından yönetildiğini gösterir.
+
+4. DNS Önbellekleme
+
+İstemci Tarafı Önbellek: Tarayıcı veya işletim sistemi kısa süreliğine DNS kayıtlarını saklar.
+
+Recursive Resolver Önbelleği: ISS nin DNS sunucuları, sık kullanılan sorguları saklar.
+
+Yetkili Ad Sunucusu Önbelleği: DNS sağlayıcıları önbellek süreleri (TTL - Time to Live) ile kayıtları belirli bir süre saklar.
+
+
+

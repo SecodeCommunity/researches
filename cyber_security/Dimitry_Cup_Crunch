@@ -1,0 +1,44 @@
+
+
+
+## 1. Dimitry
+Dimitry (Deepmagic Information Gathering Tool), hedef sistem hakkında bilgi toplamak için kullanılan bir keşif aracıdır. IP adresleri, açık portlar, whois bilgileri ve alt alan adları gibi çeşitli bilgileri elde etmek için kullanılabilir.
+
+**Kullanım Örneği:**
+
+dmitry -winsepo hedef_site
+
+Bu komut ile hedef site hakkında whois bilgileri, açık portlar ve e-posta adresleri gibi bilgileri elde edebiliriz.
+
+## 2. Crunch
+Crunch, belirli kurallara göre özelleştirilmiş wordlistler oluşturan bir araçtır. Parola denemeleri için güçlü kelime listeleri üretmek amacıyla kullanılır.
+
+**Genel Kullanım:**
+
+crunch min_karakter max_karakter  -o [çıktı_dosyası]
+
+Bu komut, belirtilen uzunluk aralığında kelimeler üreterek belirtilen dosyaya kaydeder.
+
+**Örnekler:**
+- 7 karakter uzunluğunda ve belirli bir desene sahip bir wordlist oluşturma:
+
+crunch 7 7 -t %2%3%%d -o wordlist.txt
+
+- "abcd123" karakterlerini kullanarak 3 ile 4 uzunluğunda kelime kombinasyonları oluşturma:
+
+crunch 3 4 abcd123 -o wordlist.txt
+
+
+3. CUPP (Common User Passwords Profiler)
+CUPP, hedef kişinin bilgilerine dayalı özel bir wordlist oluşturma aracıdır. Sosyal mühendislik saldırıları için özelleştirilmiş parola listeleri üretmek amacıyla kullanılır.
+
+** Kullanım:**
+
+cd cupp
+python3 cupp.py -i
+
+Bu komutlar, CUPP’ü indirir ve etkileşimli modda çalıştırır. Kullanıcıdan isim, doğum tarihi, takma adlar ve favori şeyler gibi bilgileri alarak olası şifreleri üretir.
+
+
+
+

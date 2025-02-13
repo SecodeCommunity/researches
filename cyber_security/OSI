@@ -1,0 +1,73 @@
+OSI Modeli ve Katmanları
+
+OSI (Open Systems Interconnection) modeli, bilgisayar ağlarındaki iletişimi açıklayan 7 katmandan oluşan bir modeldir. Her katman belirli görevleri yerine getirir ve veri iletişimini düzenler.
+
+1. Uygulama Katmanı (Application Layer)
+
+Kullanıcıya en yakın katmandır.
+
+Web tarayıcıları, e-posta istemcileri gibi uygulamalar bu katmanda çalışır.
+
+HTTP, FTP, SMTP, DNS gibi protokoller bu katmanda bulunur.
+
+Portlar bu katmanda işlem görür.
+
+2. Sunum Katmanı (Presentation Layer)
+
+Veriyi uygun formata dönüştürür.
+
+Şifreleme ve şifre çözme işlemleri bu katmanda gerçekleşir.
+
+Veriyi sıkıştırma ve açma işlevlerini gerçekleştirir.
+
+Örnek Protokoller: SSL, TLS, JPEG, MPEG
+
+3. Oturum Katmanı (Session Layer)
+
+İki cihaz arasında bağlantının kurulmasını, yönetilmesini ve sonlandırılmasını sağlar.
+
+Örneğin: Bir web sitesine giriş yaptığınızda oturum açmanızı ve bağlantının devam etmesini bu katman yönetir.
+
+Örnek Protokoller: NetBIOS, RPC
+
+4. Taşıma Katmanı (Transport Layer)
+
+Verinin bölünmesini ve tekrar birleştirilmesini sağlar.
+
+Akış kontrolü ve hata kontrolü yapar.
+
+Verinin doğru ve eksiksiz ulaştığını kontrol eder.
+
+TCP ve UDP protokolleri bu katmanda çalışır.
+
+5. Ağ Katmanı (Network Layer)
+
+IP adresleme ve yönlendirme işlemlerini gerçekleştirir.
+
+Veri paketlerinin en hızlı ve doğru yoldan ulaşmasını sağlar.
+
+Router (Yönlendirici) gibi cihazlar bu katmanda çalışır.
+
+Örnek Protokoller: IP, ICMP, ARP
+
+6. Veri Bağlantı Katmanı (Data Link Layer)
+
+Fiziksel katman ile ağ katmanı arasındaki iletişimi sağlar.
+
+Veriyi çerçeveler (frames) haline getirerek fiziksel katmana iletir.
+
+İki alt katmana ayrılır:
+
+MAC (Media Access Control): Fiziksel adresleme işlemlerini yapar.
+
+LLC (Logical Link Control): Veri çerçevelerinin hata kontrolünü ve akış kontrolünü gerçekleştirir.
+
+Örnek Protokoller: Ethernet, PPP
+
+7. Fiziksel Katman (Physical Layer)
+
+Veri bitlerinin fiziksel ortamda iletilmesini sağlar.
+
+Kablolar, fiber optik, sinyaller, voltaj seviyeleri gibi fiziksel bileşenleri kapsar.
+
+Örnek Cihazlar: Hub, tekrarleyici (repeater), modem
