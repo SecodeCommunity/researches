@@ -39,5 +39,33 @@ Orta Seviye: Bu seviyede daha gelişmiş araçlar kullanılır. Araçlar, dijita
 Yasal ve Etik Kullanım
 OSINT araçlarının ve sosyal medya istihbaratının kullanımı, yasal sınırlar içinde yapılmalıdır. Dijital dünyada kişisel verilerin toplanması ve paylaşılması, gizlilik haklarına saygı gösterilerek yapılmalıdır. Aksi takdirde, DOXING gibi yasa dışı faaliyetler ortaya çıkabilir.
 
+2. WhatsMyName
+Nedir?
+WhatsMyName, belirli bir kullanıcı adının (nickname) internette hangi platformlarda kullanıldığını tespit etmeye yarayan bir OSINT aracıdır.
+OSINT ile ilişkisi
+Kullanıcı adının farklı sitelerde (örneğin sosyal medya, forumlar, e-ticaret siteleri) bulunup bulunmadığını analiz eder.
+Siber güvenlik uzmanları, etik hackerlar ve OSINT araştırmacıları, belirli bir kişinin dijital ayak izini çıkarmak için kullanabilir.
+Kullanım Alanları: Dijital adli bilişim, kimlik tespiti, sosyal mühendislik saldırılarından korunma.
+3. Blackbird Tool
+Nedir?
+Blackbird, sosyal medya hesaplarını tespit etmek ve analiz etmek için kullanılan bir OSINT aracıdır.
+OSINT ile ilişkisi
+Kullanıcı adı, e-posta veya diğer verileri kullanarak sosyal medya hesaplarını araştırır.
+Kişinin hangi platformlarda aktif olduğunu belirleyerek dijital ayak izini haritalar.
+Kullanım Alanları: Kimlik doğrulama, siber tehdit analizi, siber takip ve istihbarat toplama.
+4. GeoSpy AI Init
+Nedir?
+GeoSpy, coğrafi konum izleme ve analiz için kullanılan bir OSINT aracıdır. AI Init özelliği, yapay zeka destekli analizler içerir.
+OSINT ile ilişkisi
+Konum tabanlı açık kaynak bilgilerini analiz eder.
+Sosyal medya, IP adresleri veya diğer verilerden konum bilgisi çıkarır.
+Kullanım Alanları: Kaybolan kişileri bulma, siber suçları izleme, fiziksel güvenlik analizi.
+5. Have I Been Pwned (HIBP)
+Nedir?
+Have I Been Pwned, e-posta adreslerinin ve şifrelerin veri ihlallerine (data breaches) maruz kalıp kalmadığını kontrol eden bir web servisidir.
+OSINT ile ilişkisi
+Bir e-posta veya kullanıcı adının sızdırılmış olup olmadığını kontrol eder.
+Veri ihlallerine uğramış hesapları belirlemek için siber güvenlik uzmanları ve bireyler tarafından kullanılır.
+Kullanım Alanları: Kişisel hesap güvenliği, veri sızıntısı araştırmaları, siber güvenlik farkındalığı
 
 
