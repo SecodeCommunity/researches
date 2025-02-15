@@ -1,0 +1,43 @@
+OSINT ve İlgili Araçlar
+
+
+
+İstihbarat, farklı türleriyle çeşitli bilgilere erişmeyi sağlar. Bu türler şunlardır:
+
+HUMINT (İnsan Kaynağı İstihbaratı): İnsanlardan alınan bilgileri ifade eder.
+SIGINT (Sinyal İstihbaratı): İletişim ağlarındaki sinyaller aracılığıyla elde edilen veriler.
+SOCMINT (Sosyal Medya İstihbaratı): Sosyal medya platformlarından elde edilen veriler.
+GEOINT (Jeoistihbarat): Coğrafi bilgilerin analizini içerir.
+IMINT (Görüntü İstihbaratı): Uydu görüntüleri gibi görsel veriler kullanılarak yapılan analizler.
+OSINT, bu türlerin her biriyle ilişkilidir, ancak genellikle dijital ortamdaki açık kaynaklardan veri toplamakla sınırlıdır. Bu veriler, sosyal medya platformlarında yapılan paylaşımlar, blog yazıları, fotoğraflar ve diğer dijital içerikler aracılığıyla analiz edilir. 
+
+
+
+OSINT, doğru şekilde kullanıldığında faydalıdır, fakat etik olmayan yollarla elde edilen verilerle yapılan manipülasyonlar yasal zorluklar yaratabilir. Bu nedenle, dijital verilerin analizi ve kullanımı her zaman etik ve yasal sınırlar içinde olmalıdır.
+
+OSINT Döngüsü: Adımlar ve Süreçler
+Bir OSINT araştırmasının temel adımları şunlardır:
+
+Planlama ve Hedefler: Bu aşamada, araştırma hedefleri belirlenir ve bu hedeflere yönelik stratejiler oluşturulur.
+Veri Yayılımı ve Toplanması: İnternette yapılan aramalarla çeşitli dijital kaynaklardan bilgi toplanır.
+İşleme: Toplanan veriler işlenir ve doğruluğu kontrol edilir. Yanlış veya alakasız bilgiler ayıklanır.
+Analiz ve Yorumlama: İşlenmiş veriler daha ayrıntılı bir şekilde analiz edilir.
+Sonuçların Dağıtımı: Nihai rapor oluşturulur ve araştırma sonuçları paylaşılır.
+Bu adımlar, OSINT araştırmalarının sistematik bir şekilde yapılmasını sağlar ve güvenilir, anlamlı sonuçlar elde edilmesine olanak tanır.
+
+SOCMINT: Sosyal Medya İstihbaratının Gücü
+Sosyal Medya İstihbaratı (SOCMINT), sosyal medya platformlarında yapılan paylaşımlar ve diğer içerikler aracılığıyla bilgi toplamak için kullanılan bir yöntemdir. İnsanlar günde ortalama 2 saat 20 dakika sosyal medya platformlarında vakit geçirir, bu da büyük bir veri kaynağına yol açar. Instagram, Facebook ve Twitter gibi platformlar, kişisel bilgilerin elde edilmesinde yaygın olarak kullanılır.
+
+Sosyal medya paylaşımları, yalnızca yazılı içerikler değil, aynı zamanda görseller ve konum verileri de içerebilir. Bu veriler, bir kişinin yaşam tarzı, seyahat geçmişi, sosyal çevresi gibi birçok önemli bilgiye ulaşılmasını sağlar.
+
+OSINT Araçları: Temel Seviye ve İleri Seviye Kullanım
+OSINT araçları, dijital ortamda bilgi toplamak için kullanılan yazılımlardır. Bu araçlar, internet üzerinden ve dijital izlerden veri toplayarak analiz yapmayı sağlar. OSINT araçları, genellikle üç farklı seviyede kullanılır:
+
+Temel Seviye: Bu seviyede, kullanıcı adı veya IP adresi gibi bilgiler kullanılarak basit analizler yapılır. Bu, genellikle ücretsiz araçlarla yapılan yüzeysel araştırmalardır.
+Orta Seviye: Bu seviyede daha gelişmiş araçlar kullanılır. Araçlar, dijital ortamda daha derinlemesine veri analizi yapar ve sosyal medya hesapları, e-posta adresleri gibi bilgileri araştırabilir.
+İleri Seviye: En ileri düzeyde, daha karmaşık yazılımlar ve API kullanılarak bilgi toplanır. Bu tür analizler genellikle daha derinlemesine bir teknik bilgi gerektirir ve genellikle profesyonel analistler tarafından yapılır.
+Yasal ve Etik Kullanım
+OSINT araçlarının ve sosyal medya istihbaratının kullanımı, yasal sınırlar içinde yapılmalıdır. Dijital dünyada kişisel verilerin toplanması ve paylaşılması, gizlilik haklarına saygı gösterilerek yapılmalıdır. Aksi takdirde, DOXING gibi yasa dışı faaliyetler ortaya çıkabilir.
+
+
+
